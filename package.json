@@ -1,0 +1,46 @@
+{
+  "name": "test_better_t_stack",
+  "private": true,
+  "type": "module",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "zod": "^4.0.2",
+      "@trpc/server": "^11.5.0",
+      "@trpc/client": "^11.5.0",
+      "ai": "^5.0.49",
+      "@ai-sdk/google": "^2.0.13",
+      "better-auth": "^1.3.28",
+      "drizzle-orm": "^0.44.2",
+      "dotenv": "^17.2.2",
+      "tsdown": "^0.15.5"
+    }
+  },
+  "scripts": {
+    "dev": "bun run --filter '*' dev",
+    "build": "bun run --filter '*' build",
+    "check-types": "bun run --filter '*' check-types",
+    "dev:native": "bun run --filter native dev",
+    "dev:web": "bun run --filter web dev",
+    "db:push": "bun run --filter @test_better_t_stack/db db:push",
+    "db:studio": "bun run --filter @test_better_t_stack/db db:studio",
+    "db:generate": "bun run --filter @test_better_t_stack/db db:generate",
+    "db:migrate": "bun run --filter @test_better_t_stack/db db:migrate",
+    "db:start": "bun run --filter @test_better_t_stack/db db:start",
+    "db:watch": "bun run --filter @test_better_t_stack/db db:watch",
+    "db:stop": "bun run --filter @test_better_t_stack/db db:stop",
+    "db:down": "bun run --filter @test_better_t_stack/db db:down"
+  },
+  "packageManager": "bun@1.2.20",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "tsdown": "^0.15.5",
+    "@types/node": "^22.13.11"
+  }
+}
